@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-display</title>
+    <style>
+        /* 基本的布局：流式布局(flow display) */
+        /* 注意坐标系 原点：左上顶点 x轴：水平（内联）向左 y轴：垂直向下*/
+
+        /* 流式布局三大元素类型: 块级block 行级(内联)inline 行级块inline-block*/
+        /* block 独占一行 可以通过css改变宽高 可以包含block inline等其它(所有)元素 */
+        /* inline 内容决定大小，不能由css决定 只能包含行级元素(除<p>) */
+        /* inline-block 内容决定大小，但可以由css改变 典型：<img> */
+
+        /* ！display是可以改变的 */
+
+        div {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* 注释掉下面的css，你会发现下面的两个div上来了 */
+        /* img的大小可以通过css来决定 */
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 使元素居中的一种方法：margin:auto -->
+    <div style="margin: auto;">
+        <div>
+            <!-- 标题 head -->
+            <h4>坐标系</h4> 
+            <!-- 图片 image -->
+            <!-- 当前路径 ./
+                 上级路径 ../ -->
+            <img src="../img/coordinate-system.png" alt="这里写替代文字">
+        </div>
+    
+        <!-- 块级元素独占一行 -->
+        <!-- div 内嵌 span -->
+        <div style="background-color: red;"><span>块级元素独占一行</span></div>
+        <div style="background-color: yellow;">
+            <span>div 内嵌 span</span>
+            <span>inline的span是内联的</span>
+        </div>
+    </div>
+    
+</body>
+</html>

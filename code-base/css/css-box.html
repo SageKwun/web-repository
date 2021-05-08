@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-box</title>
+    <style>
+        /* 盒子模型 box model */
+        /*
+            一个元素具有 宽width 高height 内边距padding 边框border 外边距margin 这几个属性
+        */
+        #box {
+            width: 100px;
+            height: 150px;
+            /* 顺时针 上左下右 */
+            margin: 10px 20px 30px 40px;
+            /* 两个值的时候为 上下 左右 */
+            padding: 10px 20px;
+            /* 可以单独设置某个方向 */
+            /* 尺寸 线类型 颜色 */
+            border: 1px solid black;
+            border-bottom: 5px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#%E4%BB%80%E4%B9%88%E6%98%AFcss_%E7%9B%92%E6%A8%A1%E5%9E%8B">
+        点击我看MDN文档
+        </a>
+    </div>
+    <div>
+        <img src="../img/css-box.jpg" alt="">
+    </div>
+    
+</body>
+</html>

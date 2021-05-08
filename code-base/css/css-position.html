@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-position</title>
+    <style>
+        /* 位置 position */
+        .container {
+            margin: 10px auto 1000px;
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+        }
+        .container .box {
+            margin: 5px auto;
+            width: 100px;
+            height: 100px;
+        }
+        /* relative:相对定位 */
+        /* 保留原来位置进行定位（两个层都占） */
+        /* 相对于自己原来的位置定位 */
+        .relative {
+            position: relative;
+            top: 10px;
+            left: 100px;
+            background-color: red;
+        }
+        /* absolute：绝对定位（坐标） */
+        /* 相对于最近的有定位的父级进行定位，没有则文档 */
+        /* 脱离原来的层面进行定位 */
+        /* 每一个absolute都是一层 */
+        /* 会自动把元素转换成inline-block */
+        .absolute {
+            position: absolute;
+            background-color: yellow;
+        }
+        /* 固定定位 */
+        /* 相对于视图定位 */
+        .fixed {
+            position: fixed;
+            left: 300px;
+            background-color: blue;
+        }
+        /* 粘性定位 */
+        .sticky {
+            position: sticky;
+            top: 10px;
+            background-color: green;
+        }
+        a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box relative"></div>
+        <div class="box absolute"></div>
+        <div class="box fixed">
+            <a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Positioning" target="_blank">
+            点我看MDN文档
+            </a>
+        </div>
+        <div class="box sticky"></div>
+    </div>
+</body>
+</html>

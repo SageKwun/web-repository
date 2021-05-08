@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-chooser</title>
+    <style>
+        /* css基本选择器：id、class、标签 */
+        /* id > class > 标签 */
+        
+        /* id选择器 */
+        #id {
+            background-color: red;  /*直接写颜色单词，比较low，适合临时演示用*/
+        }
+        /* class选择器 */
+        .class {
+            background-color: #ffff00;  /*十六进制写法*/
+        }
+        /* 标签选择器 */
+        div {
+           width: 100px;
+           height: 100px; 
+
+           background-color: rgb(0, 0, 255);    /*rgb写法*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="id" class="class">id</div>
+    <div class="class">class</div>
+    <div>div</div>
+</body>
+
+</html>
