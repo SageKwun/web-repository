@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sea </title>
+    <style>
+        
+        *{
+            /* 整个页面的页边距 */
+            margin: 0;
+        }
+        ul {
+            position: fixed;
+            list-style-type:none ;
+            left: 1%;
+            top: 15px;
+            border:1px solid #2f2f4f;
+            padding: 20px;
+            /* 页边距 */
+
+        }
+        a{
+            color:black;
+            text-decoration: none;
+        }
+        h1,h3{
+            text-align: center;
+            margin-bottom: 10px;
+            color: #2f2f4f;
+
+        }
+
+        #bigheadline {
+            position: sticky;
+            background-color:steelblue;
+            top: 0%;
+        }
+        #main{
+            margin: 3px auto;
+            /* 距离边缘 */
+            width: 1000px;
+            border: 5px solid #2f2f4f;
+            /* 边框粗细 样式 颜色 */
+            padding: 2%;
+        }
+        #main > div {
+            margin:4%;
+            width: 900px;
+            height: 500px;
+            border: 1px dashed #2f2f4f;
+        }
+        .img{
+            display: inline-block;
+            /* 虚线框框 */
+            width: 300px;
+            height: 400px;
+            margin-left: 20px;
+            border: 2px dashed #2f2f4f;
+        } 
+        .img img{
+            width: inherit;
+            height: inherit;
+        }
+        .content{
+            display: inline-block;
+            width:500px;
+            margin-left: 20px;
+            vertical-align: top;
+            /* 垂直对齐方式 */
+            text-align: left;
+            text-indent: 2em;
+            /* 首行缩进 2字符 */
+        }
+        #totop{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #2f2f4f;
+        }
+        #totop > a{
+            display: inline-block;
+            color: white;
+            margin: 5px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- content list -->
+    <!-- ul: unordered list -->
+    <ul>
+        <li><a href="#plastic">plastic</a></li>
+        <li><a href="#fishingnet">fishingnet</a></li>
+        <li><a href="#rubbish">rubbish</a></li>
+    </ul>
+        
+    <!-- main -->
+    <div id="main">
+        <h1 id="bigheadline">救救我救救我！！</h1>
+        <!-- the first chooser -->
+        <div>
+            <!-- a headline with id -->
+            <h3 id="plastic">没地方住啦！</h3>
+            <!-- divided into two class:img and content  -->
+            <div class="img">
+                <!-- alt：the alternative word when the img can't load -->
+                <img src="img/sea-life3.jpg" alt="加载不出来啦...哈哈">
+            </div>
+            <div class="content">我是一块有class的文本。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。</div>
+        </div>
+        <!-- the second chooser -->
+        <div>
+            <h3 id="fishingnet">别网我呜呜</h3>
+            <div class="img">
+                <img src="img/sea-life2.jpg" alt="我崩cry了">
+            </div>
+            <div class="content">我是一块有dream的文本。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。</div>
+        </div>
+        <!-- the third chooser -->
+        <div>
+            <h3 id="rubbish">太埋汰了啊 咦惹~</h3>
+            <div class="img" id="thirdChooser">
+                <img src="img/sea-life1.jpg" alt="我是废物点心">
+            </div>
+            <div class="content">我是一块有dream的小饼干。怎么才能让这三张图片塞进同一个框框捏？让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。让我康康右边在哪。</div>
+        </div>
+
+    </div>
+    
+    <!-- to top  -->
+    <div id="totop">
+        <a href="#main">return to top</a>
+    </div>
+</body>
+</html>
