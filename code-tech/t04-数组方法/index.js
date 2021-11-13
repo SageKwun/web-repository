@@ -86,11 +86,26 @@ const frontEnd = [
 
 function run(arr) {
   // 1. 打印arr里有几个元素
+  console.log(arr.length);
   // 2. 用一行代码完成（按顺序）
   //        将arr内sex属性为0的值改为'男'，1改为'女'
   //        筛选出arr内team为'前端'的元素
   //        打印一行内容，内容为筛选后arr内所有男生的名字学号，格式以女生为例: "姓名:圆圆,学号:21032206;姓名:圆圆,学号:21032206;姓名:kk,学号:20051406;"
+  console.log(
+    arr
+      .map((ele) => {
+        ele.sex = ele.sex === 0 ? "男" : "女";
+        return ele;
+      })
+      .filter((ele) => ele.team === "前端")
+      .reduce(
+        (pre, cur) =>
+          pre + (cur.sex === "男" ? `姓名:${cur.name},学号:${cur.id};` : ""),
+        ""
+      )
+  );
   // 3. 返回筛选后的arr
+  return arr.filter((ele) => ele.team === "前端");
 }
 
 // 打印一下运行结果看看做的对不对吧~
