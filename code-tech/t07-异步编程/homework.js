@@ -13,7 +13,29 @@
  * 3. 请将代码提交到自己的分支上！！！
  */
 
-function getWeather(city, region) {}
+async function getWeather(city, region) {
+  const KEY = "e2b426dfd936449d8c21a80a644cec49";
+  const CITY_URL = "https://geoapi.qweather.com/v2/city/lookup?";
+  const WEATHER_NOW = "https://devapi.qweather.com/v7/weather/now?";
+
+  let res = await fetch(`${CITY_URL}location=${region}&adm=${city}&key=${KEY}`);
+  console.log(res);
+  let resJSON = await res.json();
+  console.log(resJSON);
+  let cityID = resJSON.location[0].id;
+  console.log(cityID);
+
+  resJSON = await (
+    await fetch(`${WEATHER_NOW}location=${cityID}&key=${KEY}`)
+  ).json();
+
+  //   const now = resJSON.now;
+  now = { temp: "17", windDir: "东南风" };
+
+  let { temp, windDir } = now;
+
+  console.log("temp: ", temp);
+}
 
 // 测试
 getWeather("杭州市", "上城区");
