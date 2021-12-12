@@ -39,6 +39,7 @@ async function getWeather(city, region) {
 
 // 测试
 getWeather("杭州市", "上城区");
+console.log(213123);
 
 
 
