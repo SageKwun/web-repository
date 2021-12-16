@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="weather.js"></script>
+    <link href="weather.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="center">
+        <div class='search'>
+            <div class="input">
+                <textarea placeholder="省/直辖市/自治区" id='s_city'></textarea>
+                <textarea placeholder="地区" id='s_region'></textarea>
+                <button onclick="search()">search</button>
+            </div>
+            
+
+            <div>
+                <h5 id='position'></h5>
+                <h5 id='time'></h5>
+                <h5 id='temp'></h5>
+                <h5 id='feelsLike'></h5>
+
+                <div class="weather">
+                    <h5 id='text'></h5>
+                    <div id="w_img"></div>
+                </div>
+
+                <h5 id='humidity'></h5>
+                <h5 id='windDir'></h5>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
